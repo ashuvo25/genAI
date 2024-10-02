@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 templ = """
 Answer the Question.
 
-History: {text}
+History: {context}
 
 Question: {question}
 """
@@ -14,7 +14,7 @@ prompt = ChatPromptTemplate.from_template(templ)
 
 chain = prompt | model
 
-
+context  = ""
 
 def  genAI():
     text = ""
