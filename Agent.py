@@ -25,7 +25,8 @@ def  genAI():
             break
         answer = chain.invoke({"context": text, "question": user})
         print("Roza : ",answer)
-        text+= f"\nYou: {user}\nRoza: {answer}"
+        # context+= f"\nYou: {user}\nRoza: {answer}"
+        print("\n")
 
 
 
