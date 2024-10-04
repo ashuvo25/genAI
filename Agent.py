@@ -16,20 +16,19 @@ chain = prompt | model
 
 context  = ""
 
-def  genAI():
-    text = ""
-    print("q means exit")
+def genAI():
+    text = "" 
+    print("q means exit \n")
     while True:
-        user = input("You : ")
+        user = input("You: ")
         if user.lower() == "q":
             break
+                             
         answer = chain.invoke({"context": text, "question": user})
-        print("Roza : ",answer)
-        text+= f"\nYou: {user}\nRoza: {answer}"
+        print("Roza:", answer)
 
-
+        text += f"\nYou: {user}\nRoza: {answer}"
+        print("\n")
 
 if __name__ == "__main__":
     genAI()
-
-
